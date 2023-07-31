@@ -14,6 +14,7 @@ export default function Menu(parent){
 
     let headM=document.createElement('h3');
     headM.textContent="Menu";
+    headM.setAttribute('id','head');
 
     let breakfast=document.createElement('div');
     breakfast.setAttribute('id','firstin');
@@ -75,7 +76,10 @@ export default function Menu(parent){
 
     let meals=document.createElement('div');
     meals.setAttribute('id','firstin');
+    meals.setAttribute('class','meals');
     let mhead=document.createElement('h4');
+    mhead.setAttribute('id','divhead');
+
     mhead.textContent="MEALS";
 
     let veg=document.createElement('div');

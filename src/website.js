@@ -1,7 +1,7 @@
 import home from "./home.js";
 import menu from "./menu.js";
 import contacts from "./contacts.js";
-import bg_img from "./images/bg_img.png"
+import masala from "./images/masala.jpg";
 export default class website{
     constructor(){
         this.container=document.createElement('div');
@@ -27,14 +27,16 @@ export default class website{
 
      let Hbtn=document.createElement('button');
      Hbtn.setAttribute('id','Hbtn');
+     Hbtn.setAttribute('class',"button-86");
      Hbtn.textContent="Home";
      Hbtn.addEventListener("click",()=>{
         this.clear_content(); 
-        home(this.content);
+        home(this.content,this.footer);
     });
 
      let Mbtn=document.createElement('button');
      Mbtn.setAttribute('id','Cbtn');
+     Mbtn.setAttribute('class',"button-86");
      Mbtn.textContent="Menu";
      Mbtn.addEventListener("click",()=>{
         this.clear_content(); 
@@ -42,6 +44,7 @@ export default class website{
 
      let Cbtn=document.createElement('button');
      Cbtn.setAttribute('id','Fbtn');
+     Cbtn.setAttribute('class',"button-86");
      Cbtn.textContent="Contacts";
      Cbtn.addEventListener("click",()=>{
         this.clear_content(); 
@@ -58,16 +61,18 @@ export default class website{
 clear_content(){
     this.content.innerHTML="";
     const bg = new Image();
-    bg.src = bg_img;
+    bg.src = masala;
     bg.setAttribute('id',"bg_img");
     this.content.appendChild(bg);
+   
 }
 create_content(){
     const bg = new Image();
-    bg.src = bg_img;
+    bg.src = masala;
     bg.setAttribute('id',"bg_img");
     this.content.appendChild(bg);
-    home(this.content);
+    
+    home(this.content,this.footer);
 }
 create_footer(){
     let cp=document.createElement('div');
@@ -79,7 +84,7 @@ create_footer(){
 create_website(){
     document.body.appendChild(this.header);
     document.body.appendChild(this.content);
-    document.body.appendChild(this.footer);
+    
     
 }
 call_all(){

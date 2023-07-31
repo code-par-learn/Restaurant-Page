@@ -1,5 +1,5 @@
 import vanakkam from "./images/vanakkam.png";
-export default function home(parent){
+export default function home(parent,child){
     let divH=document.createElement('section');
     divH.setAttribute('class',"overlay");
     divH.setAttribute('aria-hidden', 'false');
@@ -8,6 +8,7 @@ export default function home(parent){
     overlay.setAttribute('id','divH');
 
     let head=document.createElement('h3');
+    head.setAttribute('id','head');
     head.textContent="HOME";
     let para=document.createElement('p');
     para.setAttribute('id','para');
@@ -23,6 +24,7 @@ export default function home(parent){
     overlay.appendChild(imgvk);
     overlay.appendChild(para2);
     divH.appendChild(overlay);
+    divH.appendChild(child);
     parent.appendChild(divH);
 }
 
